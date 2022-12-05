@@ -9,7 +9,7 @@ import supercoders.parking.model.Employee;
 import supercoders.parking.model.dao.EmployeeDao;
 import supercoders.parking.model.dao.database.EmployeeDaoImplementation;
 
-class DataaccessTests {
+class EmployeeDataaccessTests {
 
 	private static EmployeeDao employeeDao = new EmployeeDaoImplementation();
 
@@ -25,7 +25,7 @@ class DataaccessTests {
 	}
 
 	@Test
-	void testAddGetByInitialsAndDelete() throws Exception {
+	void testAddAndGetByInitialsAndDelete() throws Exception {
 		
 		Employee newEmployee = new Employee("XUXU", "Xuluthu [TEST]", "Xuluthuson", false, LocalDate.now());
 		int numberOfTestPersons = employeeDao.findEmployeesFromPartOfName("TEST").size();

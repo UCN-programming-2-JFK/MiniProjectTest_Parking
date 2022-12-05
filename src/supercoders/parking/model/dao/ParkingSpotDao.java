@@ -12,5 +12,5 @@ public interface ParkingSpotDao {
 	boolean deleteParkingSpot(int id) throws Exception;
 	
 	List<ParkingSpot> getByEmployeeId(String employeeInitials) throws Exception;
-	
+	List<ParkingSpot> getByParkingLocationId(int parkingLocationId) throws Exception;
 }

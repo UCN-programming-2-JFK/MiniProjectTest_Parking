@@ -11,7 +11,7 @@ public class RentalAgreement
 
 	public RentalAgreement(int id, int employeeId, int spotNumber, Date startDate, Date endDate) {
 		this(employeeId, spotNumber, startDate, endDate);
-		this.id = id;
+		this.setId(id);
 	}
 
 	public RentalAgreement(int employeeId, int spotNumber, Date startDate, Date endDate) {
