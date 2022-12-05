@@ -6,10 +6,10 @@ import supercoders.parking.model.Employee;
 
 public interface EmployeeDao {
 	List<Employee> getAll();
-	Employee getEmployee(int id);
+	Employee getEmployee(String initials);
 	boolean addEmployee(Employee newEmployee);
-	boolean updateEmployee(Employee carToUpdate);
-	boolean deleteEmployee(String licensePlate);
+	boolean updateEmployee(Employee employeeToUpdate);
+	boolean deleteEmployee(String employeeInitials);
 	
 	Employee FindEmployeeFromPartOfName(String partOfName);
 }

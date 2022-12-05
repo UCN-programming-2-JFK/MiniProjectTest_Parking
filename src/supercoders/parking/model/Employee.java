@@ -4,32 +4,28 @@ import java.util.*;
 
 public class Employee
 {
-	private int id;
-    private String name;
-    private boolean isVip;
-    private int employmentYear;
+	private String initials, firstName, lastName;
+    private boolean isManager;
+    private Date employmentDate;
     private List<ParkingSpot> parkingSpots;
-    private ArrayList<Car> cars;
+    private ArrayList<Vehicle> cars;
 
-    public Employee (int id, String name, boolean isVip, int employmentYear) {
-    	this(name, isVip, employmentYear);
-    }
-    
-    public Employee(String name, boolean isVip, int employmentYear) {
-        this.setName(name);
-        this.setVip(isVip);
-        this.setEmploymentYear(employmentYear);
+    public Employee (String initials, String firstName, String lastName, boolean isManager, Date employmentDate) {
+    	this.setInitials(initials);
+        this.setFirstName(firstName);
+        this.setLastName(lastName);
+        this.setIsManager(isManager);
+        this.setEmploymentDate(employmentDate);
         parkingSpots = new ArrayList<ParkingSpot>(); 
-        cars = new ArrayList<Car>();
+        cars = new ArrayList<Vehicle>();
     }
 
-    
     public boolean hasCar(){
         return !cars.isEmpty();
     }
     
-    public boolean isVip(){
-        return isVip;
+    public boolean isManager(){
+        return isManager;
     }
            
     public List<ParkingSpot> getParkingSpots(){
@@ -40,24 +36,24 @@ public class Employee
             this.parkingSpots.add(parkingPlace);
         }
 
-    public void addCar(Car car) {
+    public void addCar(Vehicle car) {
         if (car!=null) {
             cars.add(car);
         }
     }
-    public boolean removeCar(Car car) {
+    public boolean removeCar(Vehicle car) {
     	return cars.remove(car);
     }
     
-    public List<Car> getCars(){
-    	return new ArrayList<Car>(cars);
+    public List<Vehicle> getCars(){
+    	return new ArrayList<Vehicle>(cars);
     }
 
     public boolean hasElectricCar(){
         boolean found = false;
         int index = 0;
         while(!found && index < cars.size()){
-            Car car = cars.get(index);
+            Vehicle car = cars.get(index);
             if (car.isElectric()) {
                 found = true;
             } else {
@@ -67,31 +63,39 @@ public class Employee
         return found;
     }
 
-	public int getId() {
-		return id;
+	public String getInitials() {
+		return initials;
 	}
 
-	public void setId(int id) {
-		this.id = id;
+	public void setInitials(String initials) {
+		this.initials = initials;
 	}
 
-	public String getName() {
-		return name;
+	public void setIsManager(boolean isManager) {
+		this.isManager = isManager;
 	}
 
-	public void setName(String name) {
-		this.name = name;
+	public Date getEmploymentDate() {
+		return employmentDate;
 	}
 
-	public void setVip(boolean isVip) {
-		this.isVip = isVip;
+	public void setEmploymentDate(Date employmentDate) {
+		this.employmentDate = employmentDate;
 	}
 
-	public int getEmploymentYear() {
-		return employmentYear;
+	public String getFirstName() {
+		return firstName;
 	}
 
-	public void setEmploymentYear(int employmentYear) {
-		this.employmentYear = employmentYear;
+	public void setFirstName(String firstName) {
+		this.firstName = firstName;
+	}
+
+	public String getLastName() {
+		return lastName;
+	}
+
+	public void setLastName(String lastName) {
+		this.lastName = lastName;
 	}
 }

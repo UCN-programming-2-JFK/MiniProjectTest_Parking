@@ -1,11 +1,11 @@
 package supercoders.parking.model;
 
-public class Car
+public class Vehicle
 {
     private String licensePlate;
     private boolean isElectric;
     
-    public Car (String licensePlate, boolean isElectric) {
+    public Vehicle (String licensePlate, boolean isElectric) {
         this.setLicensePlate(licensePlate);
         this.setElectric(isElectric);
     }

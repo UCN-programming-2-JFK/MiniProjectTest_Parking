@@ -10,6 +10,6 @@ public interface RentalAgreementDao {
 	boolean addRentalAgreement(RentalAgreement newRentalAgreement);
 	boolean updateRentalAgreement(RentalAgreement rentalAgreementToUpdate);
 	boolean deleteRentalAgreement(int id);
-	
+
 	List<RentalAgreement> getByEmployeeId(int employeeId);
 }
