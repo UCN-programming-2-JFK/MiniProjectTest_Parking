@@ -7,7 +7,7 @@ import supercoders.parking.model.*;
 public interface ParkingLocationDao {
 	List<ParkingLocation> getAll();
 	ParkingLocation getParkingLocation(int id);
-	boolean addParkingLocation(ParkingLocation newParkingLocation);
+	int addParkingLocation(ParkingLocation newParkingLocation);
 	boolean updateParkingLocation(ParkingLocation parkingLocationToUpdate);
 	boolean deleteParkingLocation(int id);
 }

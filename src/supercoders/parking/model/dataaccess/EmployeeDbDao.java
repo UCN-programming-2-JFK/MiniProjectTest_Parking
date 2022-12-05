@@ -14,7 +14,7 @@ public class EmployeeDbDao implements EmployeeDao {
 	}
 
 	@Override
-	public Employee getEmployee(int id) {
+	public Employee getEmployee(String initials) {
 		// TODO Auto-generated method stub
 		return null;
 	}
@@ -26,13 +26,13 @@ public class EmployeeDbDao implements EmployeeDao {
 	}
 
 	@Override
-	public boolean updateEmployee(Employee carToUpdate) {
+	public boolean updateEmployee(Employee employeeToUpdate) {
 		// TODO Auto-generated method stub
 		return false;
 	}
 
 	@Override
-	public boolean deleteEmployee(String licensePlate) {
+	public boolean deleteEmployee(String employeeInitials) {
 		// TODO Auto-generated method stub
 		return false;
 	}
