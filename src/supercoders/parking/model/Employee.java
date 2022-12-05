@@ -1,22 +1,21 @@
 package supercoders.parking.model;
 
-import java.util.ArrayList;
-import java.util.Calendar;
-/**
- * Write a description of class Employee here.
- *
- * @author (your name)
- * @version (a version number or a date)
- */
+import java.util.*;
+
 public class Employee
 {
+	private int id;
     private String name;
     private boolean vip;
     private int yearEmployment;
     private ParkingSpace parkingPlace;
     private ArrayList<Car> cars;
 
-    public Employee (String name, boolean vip, int yearEmployment) {
+    public Employee (int id, String name, boolean vip, int yearEmployment) {
+    	this(name, vip, yearEmployment);
+    }
+    
+    public Employee(String name, boolean vip, int yearEmployment) {
         this.name = name;
         this.vip = vip;
         this.yearEmployment = yearEmployment;
@@ -46,16 +45,22 @@ public class Employee
         
     
     public void setParkingSpace(ParkingSpace parkingPlace) {
-
         if (parkingPlace!=null ) {
             this.parkingPlace = parkingPlace;
         }
     }
 
-    public void registerCar(Car car) {
+    public void addCar(Car car) {
         if (car!=null) {
             cars.add(car);
         }
+    }
+    public boolean removeCar(Car car) {
+    	return cars.remove(car);
+    }
+    
+    public List<Car> getCars(){
+    	return new ArrayList<Car>(cars);
     }
 
 
@@ -66,7 +71,7 @@ public class Employee
         int index = 0;
         while(!found && index<cars.size()){
             Car car = cars.get(index);
-            if (car.isLuxurious()) {
+            if (car.isLuxuryCar()) {
                 found = true;
             } else {
                 index++;
@@ -74,4 +79,12 @@ public class Employee
         }
         return found;
     }
+
+	public int getId() {
+		return id;
+	}
+
+	public void setId(int id) {
+		this.id = id;
+	}
 }

@@ -1,24 +1,24 @@
 package supercoders.parking.model;
-/**
- * Write a description of class Car here.
- *
- * @author (your name)
- * @version (a version number or a date)
- */
+
 public class Car
 {
-    private String numberPlate;
-    private boolean luxurious;
+    private String licensePlate;
+    private boolean isLuxuryCar;
     
-    public Car () {
-    }
-    
-    public Car (String numberPlate, boolean luxurious) {
-        this.numberPlate = numberPlate;
-        this.luxurious = luxurious;
+    public Car (String licensePlate, boolean isLuxuryCar) {
+        this.setLicensePlate(licensePlate);
+        this.isLuxuryCar = isLuxuryCar;
     }
 
-    public boolean isLuxurious() {
-        return luxurious;
+    public boolean isLuxuryCar() {
+        return isLuxuryCar;
     }
+
+	public String getLicensePlate() {
+		return licensePlate;
+	}
+
+	public void setLicensePlate(String licensePlate) {
+		this.licensePlate = licensePlate;
+	}
 }

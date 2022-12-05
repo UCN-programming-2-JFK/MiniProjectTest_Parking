@@ -13,12 +13,12 @@ public class AssignParkingPlace
 
     
     public void assignFreePPEmployee(String employeeName) {
-        Employee e = EmployeeContainer.getInstance().findEmployeeByName(employeeName);         
-        ParkingSpace p = ParkingSpaceContainer.getInstance().findFirstAvailableParkingPlace();
+        Employee employee = EmployeeContainer.getInstance().findEmployeeByName(employeeName);         
+        ParkingSpace parkingSpace = ParkingSpaceContainer.getInstance().findFirstAvailableParkingPlace();
         if (employee!=null) {
-            if (employee.hasCar() && p!=null) {
-                employee.setParkingSpace(p);
-                p.setAvailable(false);
+            if (employee.hasCar() && parkingSpace!=null) {
+                employee.setParkingSpace(parkingSpace);
+                parkingSpace.setAvailable(false);
             }
         }
     }

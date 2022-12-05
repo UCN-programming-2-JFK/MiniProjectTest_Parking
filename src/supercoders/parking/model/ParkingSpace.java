@@ -1,10 +1,5 @@
 package supercoders.parking.model;
-/**
- * Write a description of class ParkingSpace here.
- *
- * @author (your name)
- * @version (a version number or a date)
- */
+
 public class ParkingSpace
 {
     private int id;
@@ -12,14 +7,19 @@ public class ParkingSpace
     private String location;
     private int fee;
     private boolean available;
-
     
-    public ParkingSpace(int id, int fee) {
-        this.id = id;
-        this.fee = fee;
-        available = true;
+    public ParkingSpace(int id, char lot, String location, int fee) {
+        this(lot, location, fee);
+    	this.setId(id);
     }
-    
+
+    public ParkingSpace(char lot, String location, int fee) {
+        this.setLot(lot);
+        this.setLocation(location);
+        this.fee = fee;
+        available = true;    	
+    }
+
     public int getFee() {
         return fee;
     }
@@ -31,5 +31,28 @@ public class ParkingSpace
     public void setAvailable(boolean value) {
         available = value;
     }
-    
+
+	public int getId() {
+		return id;
+	}
+
+	public void setId(int id) {
+		this.id = id;
+	}
+
+	public char getLot() {
+		return lot;
+	}
+
+	public void setLot(char lot) {
+		this.lot = lot;
+	}
+
+	public String getLocation() {
+		return location;
+	}
+
+	public void setLocation(String location) {
+		this.location = location;
+	}
 }
