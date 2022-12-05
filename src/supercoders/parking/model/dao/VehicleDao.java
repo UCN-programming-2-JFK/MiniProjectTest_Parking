@@ -4,11 +4,11 @@ import java.util.List;
 import supercoders.parking.model.*;
 
 public interface VehicleDao {
-	List<Vehicle> getAll();
-	Vehicle getVehicle(String licensePlate);
-	int addVehicle(Vehicle newVehicle);
-	boolean updateVehicle(Vehicle vehicleToUpdate);
-	boolean deleteVehicle(String licensePlate);
+	List<Vehicle> getAll() throws Exception;
+	Vehicle getVehicle(String licensePlate) throws Exception;
+	int addVehicle(Vehicle newVehicle) throws Exception;
+	boolean updateVehicle(Vehicle vehicleToUpdate) throws Exception;
+	boolean deleteVehicle(String licensePlate) throws Exception;
 	
-	List<Vehicle> getByOwner(String employeeInitials);
+	List<Vehicle> getByOwner(String employeeInitials) throws Exception;
 }

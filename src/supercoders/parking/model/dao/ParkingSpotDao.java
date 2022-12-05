@@ -5,12 +5,12 @@ import java.util.List;
 import supercoders.parking.model.ParkingSpot;
 
 public interface ParkingSpotDao {
-	List<ParkingSpot> getAll();
-	ParkingSpot getParkingSpot(int id);
-	int addParkingSpot(ParkingSpot newParkingSpot);
-	boolean updateParkingSpot(ParkingSpot parkingSpotToUpdate);
-	boolean deleteParkingSpot(int id);
+	List<ParkingSpot> getAll() throws Exception;
+	ParkingSpot getParkingSpot(int id) throws Exception;
+	int addParkingSpot(ParkingSpot newParkingSpot) throws Exception;
+	boolean updateParkingSpot(ParkingSpot parkingSpotToUpdate) throws Exception;
+	boolean deleteParkingSpot(int id) throws Exception;
 	
-	List<ParkingSpot> getByEmployeeId(String employeeInitials);
+	List<ParkingSpot> getByEmployeeId(String employeeInitials) throws Exception;
 	
 }

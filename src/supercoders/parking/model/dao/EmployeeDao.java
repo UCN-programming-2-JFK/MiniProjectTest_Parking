@@ -5,11 +5,11 @@ import java.util.List;
 import supercoders.parking.model.Employee;
 
 public interface EmployeeDao {
-	List<Employee> getAll();
-	Employee getEmployee(String initials);
-	boolean addEmployee(Employee newEmployee);
-	boolean updateEmployee(Employee employeeToUpdate);
-	boolean deleteEmployee(String employeeInitials);
+	List<Employee> getAll() throws Exception;
+	Employee getEmployee(String initials) throws Exception;
+	boolean addEmployee(Employee newEmployee) throws Exception;
+	boolean updateEmployee(Employee employeeToUpdate) throws Exception;
+	boolean deleteEmployee(String employeeInitials) throws Exception;
 	
-	Employee FindEmployeeFromPartOfName(String partOfName);
+	List<Employee> findEmployeesFromPartOfName(String partOfName) throws Exception;
 }

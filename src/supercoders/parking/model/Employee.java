@@ -1,16 +1,17 @@
 package supercoders.parking.model;
 
+import java.time.LocalDate;
 import java.util.*;
 
 public class Employee
 {
 	private String initials, firstName, lastName;
     private boolean isManager;
-    private Date employmentDate;
+    private LocalDate employmentDate;
     private List<ParkingSpot> parkingSpots;
     private ArrayList<Vehicle> cars;
 
-    public Employee (String initials, String firstName, String lastName, boolean isManager, Date employmentDate) {
+    public Employee (String initials, String firstName, String lastName, boolean isManager, LocalDate employmentDate) {
     	this.setInitials(initials);
         this.setFirstName(firstName);
         this.setLastName(lastName);
@@ -75,11 +76,11 @@ public class Employee
 		this.isManager = isManager;
 	}
 
-	public Date getEmploymentDate() {
+	public LocalDate getEmploymentDate() {
 		return employmentDate;
 	}
 
-	public void setEmploymentDate(Date employmentDate) {
+	public void setEmploymentDate(LocalDate employmentDate) {
 		this.employmentDate = employmentDate;
 	}
 

@@ -5,9 +5,9 @@ import java.util.List;
 import supercoders.parking.model.*;
 
 public interface ParkingLocationDao {
-	List<ParkingLocation> getAll();
-	ParkingLocation getParkingLocation(int id);
-	int addParkingLocation(ParkingLocation newParkingLocation);
-	boolean updateParkingLocation(ParkingLocation parkingLocationToUpdate);
-	boolean deleteParkingLocation(int id);
+	List<ParkingLocation> getAll() throws Exception;
+	ParkingLocation getParkingLocation(int id) throws Exception;
+	int addParkingLocation(ParkingLocation newParkingLocation) throws Exception;
+	boolean updateParkingLocation(ParkingLocation parkingLocationToUpdate) throws Exception;
+	boolean deleteParkingLocation(int id) throws Exception;
 }
