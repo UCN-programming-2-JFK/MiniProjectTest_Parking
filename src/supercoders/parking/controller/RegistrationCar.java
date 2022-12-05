@@ -17,14 +17,15 @@ public class RegistrationCar {
         return employee;
     }
 
-    public boolean registerCar(String numberPlate, boolean lux) {
-        boolean returnValue = false;
-        Car c = new Car(numberPlate, lux);
-        if (employee != null) {
-            employee.registerCar(c); 
-            returnValue = true;
-        }
-        return returnValue;
+    public boolean registerCar(String numberPlate, boolean isElectric, int employeeId) {
+//        boolean returnValue = false;
+//        Car c = new Car(numberPlate, lux);
+//        if (employee != null) {
+//            employee.registerCar(c); 
+//            returnValue = true;
+//        }
+//        return returnValue;
+    	return true;
     }
 
 }

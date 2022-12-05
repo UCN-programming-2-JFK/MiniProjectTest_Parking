@@ -3,15 +3,15 @@ package supercoders.parking.model;
 public class Car
 {
     private String licensePlate;
-    private boolean isLuxuryCar;
+    private boolean isElectric;
     
-    public Car (String licensePlate, boolean isLuxuryCar) {
+    public Car (String licensePlate, boolean isElectric) {
         this.setLicensePlate(licensePlate);
-        this.isLuxuryCar = isLuxuryCar;
+        this.setElectric(isElectric);
     }
 
-    public boolean isLuxuryCar() {
-        return isLuxuryCar;
+    public boolean isElectric() {
+        return isElectric;
     }
 
 	public String getLicensePlate() {
@@ -20,5 +20,9 @@ public class Car
 
 	public void setLicensePlate(String licensePlate) {
 		this.licensePlate = licensePlate;
+	}
+
+	public void setElectric(boolean isElectric) {
+		this.isElectric = isElectric;
 	}
 }

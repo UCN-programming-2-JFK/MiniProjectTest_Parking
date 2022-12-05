@@ -10,7 +10,7 @@ public class ParkingSpaceContainer
 {
     private static ParkingSpaceContainer uniqueInstance = new ParkingSpaceContainer();
 
-    private ArrayList<ParkingSpace> parkingPlaces = new ArrayList<>();
+    private ArrayList<ParkingSpot> parkingPlaces = new ArrayList<>();
 
     private ParkingSpaceContainer() {
     }
@@ -19,7 +19,7 @@ public class ParkingSpaceContainer
         return uniqueInstance;
     }
 
-    public boolean addParkingSpace (ParkingSpace p) {
+    public boolean addParkingSpace (ParkingSpot p) {
         boolean result = false;
         if (p!= null) {
             result = parkingPlaces.add(p);
@@ -27,12 +27,12 @@ public class ParkingSpaceContainer
         return result;
     }
 
-    public ParkingSpace findFirstAvailableParkingPlace(){
-        ParkingSpace freeParkingPlace = null;
+    public ParkingSpot findFirstAvailableParkingPlace(){
+        ParkingSpot freeParkingPlace = null;
         boolean searching = true;
-        Iterator<ParkingSpace> it = parkingPlaces.iterator();
+        Iterator<ParkingSpot> it = parkingPlaces.iterator();
         while (it.hasNext() && searching){
-            ParkingSpace p = it.next();
+            ParkingSpot p = it.next();
             if (p.isAvailable()){
                 freeParkingPlace = p;
                 searching = false;

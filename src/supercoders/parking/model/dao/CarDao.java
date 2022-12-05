@@ -9,4 +9,6 @@ public interface CarDao {
 	boolean addCar(Car newCar);
 	boolean updateCar(Car carToUpdate);
 	boolean deleteCar(String licensePlate);
+	
+	List<Car> getByOwnerId(int ownerId);
 }

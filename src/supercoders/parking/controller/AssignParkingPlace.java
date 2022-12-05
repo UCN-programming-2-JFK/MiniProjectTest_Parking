@@ -10,16 +10,15 @@ import supercoders.parking.model.*;
 public class AssignParkingPlace
 {
     Employee employee = null;  //hold the employee for the particular use case scenario 
-
     
-    public void assignFreePPEmployee(String employeeName) {
-        Employee employee = EmployeeContainer.getInstance().findEmployeeByName(employeeName);         
-        ParkingSpace parkingSpace = ParkingSpaceContainer.getInstance().findFirstAvailableParkingPlace();
-        if (employee!=null) {
-            if (employee.hasCar() && parkingSpace!=null) {
-                employee.setParkingSpace(parkingSpace);
-                parkingSpace.setAvailable(false);
-            }
-        }
-    }
+//    public void assignFreePPEmployee(String employeeName) {
+//        Employee employee = EmployeeContainer.getInstance().findEmployeeByName(employeeName);         
+//        ParkingSpot parkingSpace = ParkingSpaceContainer.getInstance().findFirstAvailableParkingPlace();
+//        if (employee!=null) {
+//            if (employee.hasCar() && parkingSpace!=null) {
+//                employee.setParkingSpace(parkingSpace);
+//                parkingSpace.setAvailable(false);
+//            }
+//        }
+//    }
 }
