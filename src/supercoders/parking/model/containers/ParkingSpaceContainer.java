@@ -1,5 +1,7 @@
-package supercoders.parking.model;
+package supercoders.parking.model.containers;
 import java.util.*;
+
+import supercoders.parking.model.ParkingSpot;
 /**
  * Write a description of class ParkingSpaceContainer here.
  *
