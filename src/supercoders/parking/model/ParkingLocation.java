@@ -33,4 +33,8 @@ public class ParkingLocation
 		this.name = name;
 		this.monthlyFee = monthlyFee;
 	}	
+	@Override
+	public String toString() {
+		return getName() + " : " + getMonthlyFee() + " DKK/month";
+	}
 }

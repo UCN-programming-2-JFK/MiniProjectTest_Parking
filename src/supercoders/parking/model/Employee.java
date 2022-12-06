@@ -99,4 +99,10 @@ public class Employee
 	public void setLastName(String lastName) {
 		this.lastName = lastName;
 	}
+	
+	@Override
+	public String toString() {
+		// TODO Auto-generated method stub
+		return "[" + getInitials() + "] " + getFirstName() + " " + getLastName();
+	}
 }
